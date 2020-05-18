@@ -10,7 +10,7 @@ python-dotenv>=0.5.1
 Keras==2.2.4
 scikit-image==0.16.2
 tensorboard==1.14.0
-tensorflow==1.14.0
+tensorflow==1.15.2
 tensorflow-estimator==1.14.0
 pandas
 tqdm
