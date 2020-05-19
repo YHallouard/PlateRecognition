@@ -62,6 +62,8 @@ You can import a class of bboxes finder and a class of OCR.
 > :warning: **The following quotations aren't running**:
 You can find in the models folder a lot of scripts about how to train and predict with NNs and  extract/preprocess data.
 
+This quotations are here to get a quick view at how to import models and to know how 
+structured input/ output data have to be.
 ```Python
 from src.models.model_bboxes import PlaqueFinder
 from src.models.model_OCR import PlaqueOCR
