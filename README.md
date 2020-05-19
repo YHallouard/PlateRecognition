@@ -125,5 +125,11 @@ POCR.train_generator(gen_flow=gen_flow,
 |:-------------------:|:------------------:|:-------------:|
 | ![](reports/figures/PJB7392_large.png)|![](reports/figures/PJB7392_resize.png)|![](reports/figures/PJB7392.png)|
 
+## OCR
+| Resized Image   |   Text   |
+|:---------------:|:--------:|
+| ![](reports/figures/PJB7392.png)|PJB7392|
+
+
 # Contribute
 - [ ] Add probability of containing a licence plate 
