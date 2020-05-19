@@ -133,4 +133,4 @@ POCR.train_generator(gen_flow=gen_flow,
 
 # Contribute
 - [ ] Add probability of containing a licence plate 
-- [ ] Create a GAN for resized image denoising (& Centering ?) before OCR
+- [ ] Create an Autoencoder for resized image denoising (& Centering ?) before OCR
