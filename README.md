@@ -58,7 +58,8 @@ To check all packages requirements, please see requirements.txt.
     - OCR
 
 # Build and Test
-You can import a class of bboxes finder and a class of OCR. The following quotations aren't running.
+You can import a class of bboxes finder and a class of OCR. 
+> :warning: **The following quotations aren't running**:
 You can find in the models folder a lot of script about how to train, predict, extract and preprocess data.
 
 ```Python
