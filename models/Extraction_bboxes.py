@@ -4,7 +4,7 @@ import numpy as np
 from darkflow.net.build import TFNet
 import copy
 import pandas as pd
-from tqdm import tqdm_notebook
+from tqdm import tqdm
 from skimage.transform import resize, rotate
 from skimage.io import imread
 from src.models.model_bboxes import PlaqueFinder
@@ -106,7 +106,7 @@ filesname = df['id'].values
 X_test = np.zeros((len(filesname), 128, 64, 3))
 i = 0
 index = []
-for file in tqdm_notebook(filesname):
+for file in tqdm(filesname):
     im = imread('./test/' + file)
     size = im.shape[:2]
     if size[0] <= size[1] / 2:
