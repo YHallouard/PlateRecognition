@@ -58,7 +58,9 @@ To check all packages requirements, please see requirements.txt.
     - OCR
 
 # Build and Test
-You can import a class of bboxes finder and a class of OCR.
+You can import a class of bboxes finder and a class of OCR. The following quotations aren't running.
+You can find in the models folder a lot of script about how to train, predict, extract and preprocess data.
+
 ```Python
 from src.models.model_bboxes import PlaqueFinder
 from src.models.model_OCR import PlaqueOCR
@@ -88,7 +90,7 @@ PF.train(x_train=X_train,
 #-----------------------------
 #      Test train OCR
 #-----------------------------
-for src.models.utils import gen_flow_for_two_inputs
+from src.models.utils import gen_flow_for_two_inputs
 index = ['train_input', 'the_labels', 'input_length', 'label_length']
 
 input_train = {'train_input': np.ones((1, 128, 64, 3)),
