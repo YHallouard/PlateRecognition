@@ -21,9 +21,9 @@ endif
 #################################################################################
 
 ## Install Python Dependencies
-requirements: test_environment
+requirements:
 	$(PYTHON_INTERPRETER) -m pip install -U pip setuptools wheel
-	$(PYTHON_INTERPRETER) -m setup.py install
+	$(PYTHON_INTERPRETER) setup.py install
 	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
 
 ## Delete all compiled Python files

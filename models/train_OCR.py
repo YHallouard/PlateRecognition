@@ -14,13 +14,13 @@ for tocken in alphabet:
     i += 1
 alphabet_num['blanc'] = i
 
-with open('train_ocr_8238.pickle', 'rb') as f:
+with open('data/train_ocr_8238.pickle', 'rb') as f:
     input_train, output_train = pickle.load(f)
 
-with open('val_ocr_2823.pickle', 'rb') as f:
+with open('data/val_ocr_2823.pickle', 'rb') as f:
     input_val, output_val = pickle.load(f)
 
-with open('test_ocr_707.pickle', 'rb') as f:
+with open('data/test_ocr_707.pickle', 'rb') as f:
     input_test, output_test = pickle.load(f)
 
 index = ['train_input', 'the_labels', 'input_length', 'label_length']
@@ -41,5 +41,5 @@ POCR.train_generator(gen_flow=gen_flow,
 
 
 # serialize weights to HDF5
-POCR.OCR.save_weights("OCR_pred.h5")
+POCR.OCR.save_weights("models/weight/OCR_pred.h5")
 print("Saved model to disk")

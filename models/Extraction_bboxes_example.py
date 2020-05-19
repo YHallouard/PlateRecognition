@@ -8,7 +8,7 @@ import pickle
 import os
 import pandas as pd
 
-PF = PlaqueFinder(shape=(224, 224, 3), weight='InceptionResNetV2.h5', loss='iou')
+PF = PlaqueFinder(shape=(224, 224, 3), weight='models/weight/InceptionResNetV2.h5', loss='iou')
 
 plate = pd.read_csv('Images_distribution.csv', sep=';')
 df = pd.read_csv('Results_to_submit.csv', sep=';')
@@ -45,5 +45,5 @@ for file in tqdm(filesname):
 
     i += 1
 
-with open('data_ocr/to_pred_ocr_%d_v2.pickle' % (len(X_test)), 'wb') as f:
+with open('data/to_pred_ocr_%d_v3.pickle' % (len(X_test)), 'wb') as f:
     pickle.dump([X_test, filesname, df['Type of Picture'].values], f, protocol=4)

@@ -7,7 +7,7 @@ from tensorflow.keras.layers import GlobalAveragePooling2D, BatchNormalization, 
                                     MaxPooling2D, Activation, Lambda, add, concatenate, GRU
 from tensorflow.keras.models import Model
 from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
-from model_losses import IoU, iou_loss, iou_loss_v2, root_mean_squared_error, iou_metric, ctc_lambda_func
+from src.models.model_bboxes_losses import IoU, iou_loss, iou_loss_v2, root_mean_squared_error, iou_metric, ctc_lambda_func
 from tensorflow.keras.models import load_model
 import matplotlib.pyplot as plt
 

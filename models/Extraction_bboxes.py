@@ -81,24 +81,22 @@ def ROI(imgcv, net):
 #       Processing
 # ------------------------
 
-plate = pd.read_csv('..data/Images_distribution.csv', sep=';')
-df = pd.read_csv('..data/Results_to_submit.csv', sep=';')
+plate = pd.read_csv('data/Images_distribution.csv', sep=';')
+df = pd.read_csv('data/Results_to_submit.csv', sep=';')
 df = pd.merge(df, plate, on=['id'])
 
-options = {"model": "cfg/yolo-plate.cfg",
-           "pbLoad": "pb_meta/yolo-plate.pb",
-           "metaLoad": "pb_meta/yolo-plate.meta",
+options = {"model": "models/cfg/yolo-plate.cfg",
+           "pbLoad": "models/pb_meta/yolo-plate.pb",
+           "metaLoad": "models/pb_meta/yolo-plate.meta",
            "batch": 8,
            "epoch": 70,
-           "annotation": "./licence plate/annotations_pascalformat/",
-           "dataset": "./licence plate/train/",
            "threshold": 0.1,
            "load": -1,
-           "backup": "/content/drive/My Drive/WayKonnect/ckpt/"}
+           "backup": "models/ckpt/"}
 
 net = TFNet(options)
 
-PF = PlaqueFinder(shape=(224, 224, 3), weight="InceptionResNetV2.h5", loss='rmse')
+PF = PlaqueFinder(shape=(224, 224, 3), weight="models/weight/InceptionResNetV2.h5", loss='rmse')
 
 plate = pd.read_csv('Images_distribution.csv', sep=';')
 df = pd.read_csv('Results_to_submit.csv', sep=';')
@@ -161,5 +159,5 @@ for file in tqdm_notebook(filesname):
 
     i += 1
 
-with open('to_pred_ocr_%d_v3.pickle' % (len(X_test)), 'wb') as f:
+with open('data/to_pred_ocr_%d_v3.pickle' % (len(X_test)), 'wb') as f:
     pickle.dump([X_test, filesname, df['Type of Picture'].values], f, protocol=4)

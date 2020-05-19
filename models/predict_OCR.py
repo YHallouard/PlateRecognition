@@ -19,11 +19,11 @@ alphabet_num['blanc'] = i
 #  Prediction to submit
 # --------------------------
 
-with open('..data/to_pred_ocr_2944_v2.pickle', 'rb') as f:
+with open('data/to_pred_ocr_2944_v3.pickle', 'rb') as f:
     X_test, filesname, _ = pickle.load(f)
 
-POCR1 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='OCR_11.h5', optimizers=Adadelta())
-POCR2 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='OCR_12.h5', optimizers=Adadelta())
+POCR1 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='models/weight/OCR_11.h5', optimizers=Adadelta())
+POCR2 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='models/weight/OCR_12.h5', optimizers=Adadelta())
 
 print('Predict the test set')
 y_hat1 = POCR1.predict(X_test)
@@ -40,7 +40,7 @@ output['id'] = filesname
 output['Plate_Number '] = ["'" + pred[i] + "'" for i in range(len(pred))]
 
 # ------ Prediction enforcement for Difficult images ---------- #
-POCR3 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='OCR_13.h5', optimizers=Adadelta())
+POCR3 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='models/weight/OCR_13.h5', optimizers=Adadelta())
 
 y_hat3 = POCR3.predict(X_test)
 
@@ -55,8 +55,8 @@ output_enforced['id'] = filesname
 output_enforced['Plate_Number '] = ["'" + pred[i] + "'" for i in range(len(pred))]
 
 
-distrib = pd.read_csv('images_distribution.csv', sep=';')
-names = pd.read_csv('Results_to_submit.csv', sep=';')
+distrib = pd.read_csv('data/images_distribution.csv', sep=';')
+names = pd.read_csv('data/Results_to_submit.csv', sep=';')
 
 names = names.merge(distrib, left_on='id', right_on='id')
 

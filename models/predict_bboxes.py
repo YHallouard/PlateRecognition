@@ -1,10 +1,10 @@
 from src.models.model_bboxes import PlaqueFinder
 import pickle
 
-with open('..data/test_37_equi.pickle', 'rb') as f:
+with open('data/test_37_equi.pickle', 'rb') as f:
     X_test, y_test = pickle.load(f)
 
-PF = PlaqueFinder(shape=(224, 224, 3), weight='InceptionResNetV2.h5', loss='iou')
+PF = PlaqueFinder(shape=(224, 224, 3), weight='models/weight/InceptionResNetV2.h5', loss='iou')
 
 pred = PF.predict(X_test)
 xh = pred[0][0]

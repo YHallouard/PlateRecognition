@@ -1,13 +1,13 @@
 from src.models.model_bboxes import PlaqueFinder
 import pickle
 
-with open('..data/train_431_equi.pickle', 'rb') as f:
+with open('data/train_431_equi.pickle', 'rb') as f:
     X_train, Y_train = pickle.load(f)
 
-with open('..data/val_148_equi.pickle', 'rb') as f:
+with open('data/val_148_equi.pickle', 'rb') as f:
     X_val, y_val = pickle.load(f)
 
-with open('..data/test_37_equi.pickle', 'rb') as f:
+with open('data/test_37_equi.pickle', 'rb') as f:
     X_test, y_test = pickle.load(f)
 
 PF = PlaqueFinder(shape=(224, 224, 3), weight=None, loss='iou')
@@ -22,5 +22,5 @@ PF.train(x_train=X_train,
          validation_data=(X_val, y_val))
 
 # serialize weights to HDF5
-PF.BboxesFinder.save_weights("InceptionResNet_trained.h5")
+PF.BboxesFinder.save_weights("models/weight/InceptionResNet_trained.h5")
 print("Saved model to disk")
