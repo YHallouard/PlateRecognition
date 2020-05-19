@@ -60,7 +60,7 @@ To check all packages requirements, please see requirements.txt.
 # Build and Test
 You can import a class of bboxes finder and a class of OCR. 
 > :warning: **The following quotations aren't running**:
-You can find in the models folder a lot of script about how to train, predict, extract and preprocess data.
+You can find in the models folder a lot of scripts about how to train and predict with NNs and  extract/preprocess data.
 
 ```Python
 from src.models.model_bboxes import PlaqueFinder
