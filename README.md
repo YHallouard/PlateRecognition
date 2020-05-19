@@ -88,6 +88,7 @@ PF.train(x_train=X_train,
 #-----------------------------
 #      Test train OCR
 #-----------------------------
+for src.models.utils import gen_flow_for_two_inputs
 index = ['train_input', 'the_labels', 'input_length', 'label_length']
 
 input_train = {'train_input': np.ones((1, 128, 64, 3)),
