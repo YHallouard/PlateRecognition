@@ -13,7 +13,7 @@ i = 0
 for tocken in alphabet:
     alphabet_num[str(tocken)] = i
     i += 1
-alphabet_num['blanck'] = i
+alphabet_num['blanc'] = i
 
 # --------------------------
 #  Prediction to submit
