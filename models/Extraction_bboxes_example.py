@@ -2,7 +2,7 @@ import numpy as np
 from tqdm import tqdm
 from skimage.transform import resize, rescale, rotate
 from skimage.io import imread
-from src.models.model_bboxes import PlaqueFinder
+from LRP.models.model_bboxes import PlaqueFinder
 from copy import deepcopy as dp
 import pickle
 import os

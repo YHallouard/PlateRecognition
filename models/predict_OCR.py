@@ -1,4 +1,4 @@
-from src.models.model_OCR import PlaqueOCR, decode_batch
+from LRP.models.model_OCR import PlaqueOCR, decode_batch
 import pickle
 from keras.optimizers import Adadelta
 import pandas as pd

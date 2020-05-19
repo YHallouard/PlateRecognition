@@ -1,4 +1,4 @@
-from src.models.model_bboxes import PlaqueFinder
+from LRP.models.model_bboxes import PlaqueFinder
 import pickle
 
 with open('data/train_431_equi.pickle', 'rb') as f:

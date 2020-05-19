@@ -7,7 +7,7 @@ from keras.models import Model
 from keras.layers.recurrent import GRU
 from keras.optimizers import SGD, Adadelta, Adam
 from keras.callbacks import EarlyStopping, ModelCheckpoint
-from src.models.utils import residual_stack
+from LRP.models.utils import residual_stack
 
 K.set_learning_phase(1)
 # from model_losses_OCR import ctc_lambda_func

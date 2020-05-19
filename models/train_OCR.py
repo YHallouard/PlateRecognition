@@ -1,6 +1,6 @@
-from src.models.model_OCR import PlaqueOCR
+from LRP.models.model_OCR import PlaqueOCR
 import pickle
-from src.models.utils import gen_flow_for_two_inputs
+from LRP.models.utils import gen_flow_for_two_inputs
 from keras.optimizers import SGD, Adadelta, Adam
 
 global alphabet

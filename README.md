@@ -65,8 +65,8 @@ You can find in the models folder a lot of scripts about how to train and predic
 This quotations are here to get a quick view at how to import models and to know how 
 structured input/ output data have to be.
 ```Python
-from src.models.model_bboxes import PlaqueFinder
-from src.models.model_OCR import PlaqueOCR
+from LRP.models.model_bboxes import PlaqueFinder
+from LRP.models.model_OCR import PlaqueOCR
 ```
 
 ```Python
@@ -93,7 +93,7 @@ PF.train(x_train=X_train,
 #-----------------------------
 #      Test train OCR
 #-----------------------------
-from src.models.utils import gen_flow_for_two_inputs
+from LRP.models.utils import gen_flow_for_two_inputs
 index = ['train_input', 'the_labels', 'input_length', 'label_length']
 
 input_train = {'train_input': np.ones((1, 128, 64, 3)),

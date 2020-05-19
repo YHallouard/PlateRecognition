@@ -1,12 +1,12 @@
 import pickle
 
-from src.models.model_OCR import PlaqueOCR, decode_batch, decode_true, PlaqueOCR_res
+from LRP.models.model_OCR import PlaqueOCR, decode_batch, decode_true, PlaqueOCR_res
 import pickle
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from fastDamerauLevenshtein import damerauLevenshtein
-from src.models.utils import gen_flow_for_two_inputs
+from LRP.models.utils import gen_flow_for_two_inputs
 from skimage.io import imsave
 from keras.optimizers import SGD, Adadelta, Adam
 
