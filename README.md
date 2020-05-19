@@ -117,13 +117,13 @@ POCR.train_generator(gen_flow=gen_flow,
 # Results
 ## PlaqueFinder
 | Image with context   |   Resized Image  |
-: ------------------- :|: --------------: 
-![20% center](reports/figures/XNR374_large.png)|![40% center](reports/figures/XNR374.png)
+|:--------------------:|:----------------:|
+| ![](reports/figures/XNR374_large.png)|![](reports/figures/XNR374.png)|
 
 ## Embeding PlaqueFinder with [Darflow](https://github.com/thtrieu/darkflow)
-| Image with context   |   ROI Image selected  |   Resized Image  |
-: ------------------- :|: -------------------: |: --------------: 
-![20% center](reports/figures/PJB7392_large.png)|![20% center](reports/figures/PJB7392_resize.png)|![40% center](reports/figures/PJB7392.png)
+| Image with context  | ROI Image selected | Resized Image |
+|:-------------------:|:------------------:|:-------------:|
+| ![](reports/figures/PJB7392_large.png)|![](reports/figures/PJB7392_resize.png)|![](reports/figures/PJB7392.png)|
 
 # Contribute
 - [ ] Add probability of containing a licence plate 
