@@ -22,8 +22,8 @@ alphabet_num['blanc'] = i
 with open('data/to_pred_ocr_2944_v3.pickle', 'rb') as f:
     X_test, filesname, _ = pickle.load(f)
 
-POCR1 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='models/weight/OCR_11.h5', optimizers=Adadelta())
-POCR2 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='models/weight/OCR_12.h5', optimizers=Adadelta())
+POCR1 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='data/weight/OCR_11.h5', optimizers=Adadelta())
+POCR2 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='data/weight/OCR_12.h5', optimizers=Adadelta())
 
 print('Predict the test set')
 y_hat1 = POCR1.predict(X_test)
@@ -40,7 +40,7 @@ output['id'] = filesname
 output['Plate_Number '] = ["'" + pred[i] + "'" for i in range(len(pred))]
 
 # ------ Prediction enforcement for Difficult images ---------- #
-POCR3 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='models/weight/OCR_13.h5', optimizers=Adadelta())
+POCR3 = PlaqueOCR(shape=(128, 64, 3), shapes=[10], gru=512, weight='data/weight/OCR_13.h5', optimizers=Adadelta())
 
 y_hat3 = POCR3.predict(X_test)
 

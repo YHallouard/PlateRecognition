@@ -89,4 +89,8 @@ target/
 .mypy_cache/
 
 # Weights
-data/weight*
+data/weight/*
+models/pb_meta/*
+models/ckpt/*
+models/cfg/*
+
