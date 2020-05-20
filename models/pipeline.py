@@ -26,8 +26,7 @@ options = {"model": "models/cfg/yolo-plate.cfg",
            "batch": 8,
            "epoch": 70,
            "threshold": 0.1,
-           "load": -1,
-           "backup": "models/ckpt/"}
+           "load": -1}
 
 net = TFNet(options)
 
