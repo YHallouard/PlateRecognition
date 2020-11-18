@@ -94,3 +94,6 @@ models/pb_meta/*
 models/ckpt/*
 models/cfg/*
 
+# env
+venv/**
+
